@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   });
   const openai = new OpenAIApi(configuration);
   const response = await openai.createCompletion({
-    model: 'text-curie-001',
+    model: 'text-davinci-002',
     prompt: `Write a supreme court decision about ${req.query.court_case}`,
     temperature: 0.94,
     max_tokens: 256,
